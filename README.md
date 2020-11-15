@@ -1,8 +1,8 @@
 Skip to content
 
-nicehash
+BROWSERHASH
 /
-NiceHashMiner
+BRIWSER-COIN MINER
 Code
 Issues
 246
@@ -14,7 +14,7 @@ Wiki
 Security
 Insights
  3.0.5.0 
-NiceHashMiner/doc/Plugins/Plugins.md
+BROWSER-COIN Miner/doc/Plugins/Plugins.md
 
 luc1an24 Update Plugins.md
 …
@@ -36,7 +36,7 @@ IMiner is the mandatory interface for all miners containing bare minimum functio
 Bare minimum example of plugin is written in Example Plugin project. The Plugin file contains implementation of IMinerPlugin interface for registration and creation of the plugin instance. The Miner file contains implementation of IMiner interface, providing required functionalities.
 
 What is MinerPluginToolkitV1 used for?
-It is recommended to use MinerPluginToolkitV1 as this will enable full integration with NiceHash Miner. It will save time developing it and enable implementation of additional advanced features. If you are writing a plugin we highly recommend that you use MinerPluginToolkitV1. All miner plugins that are developed by NiceHash miner dev team are using MinerPluginToolkitV1. For example you can check GMiner Plugin.
+It is recommended to use MinerPluginToolkitV1 as this will enable full integration with BROWSER-COIN Miner. It will save time developing it and enable implementation of additional advanced features. If you are writing a plugin we highly recommend that you use MinerPluginToolkitV1. All miner plugins that are developed by NiceHash miner dev team are using MinerPluginToolkitV1. For example you can check GMiner Plugin.
 
 MinerPluginToolkitV1 also enables creation of Background Services, check out Ethlargement plugin for example.
 
