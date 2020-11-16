@@ -2,7 +2,7 @@ Skip to content
 
 BROWSER COIN MINER
 /
-BROWSER COIN Miner
+niceHashMiner
 Code
 Issues
 246
