@@ -1,8 +1,8 @@
 Skip to content
 
-nicehash
+BROWSER COIN MINER
 /
-NiceHashMiner
+BROWSER COIN Miner
 Code
 Issues
 246
