@@ -1,6 +1,6 @@
 Skip to content
 
-NICEHASH MINER
+BROWSER HASH MINER
 /
 BROWSER COIN 
 Code
