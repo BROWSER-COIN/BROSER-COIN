@@ -1,7 +1,9 @@
 Skip to content
 
 BROWSER COIN MINER
-ambas licencias BSD
+
+[(ambas licencias BSD)]
+
 Code
 Issues
 246
