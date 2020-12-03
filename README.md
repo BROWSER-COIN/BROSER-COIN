@@ -1,7 +1,7 @@
 Skip to content
 
 BROWSER COIN MINER
-
+ambas licencias BSD
 Code
 Issues
 246
@@ -86,3 +86,4 @@ Pricing
 API
 Training
 Blog
+ambas licencias BSD
