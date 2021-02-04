@@ -89,4 +89,4 @@ API
 Training
 Blog
 ambas licencias BSD
- 
+ https://github.com/BROWSER-COIN/BROSER-COIN.wiki.git
