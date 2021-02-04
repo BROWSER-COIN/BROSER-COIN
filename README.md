@@ -15,8 +15,8 @@ Wiki
 Security
 Insights
  3.0.5.0 
-NiceHashMiner/doc/Plugins/Plugins.md
 
+https://composer.github.io/installer.sha384sum
 luc1an24 Update Plugins.md
 …
  1 contributor
