@@ -37,7 +37,7 @@ IMiner is the mandatory interface for all miners containing bare minimum functio
 Bare minimum example of plugin is written in Example Plugin project. The Plugin file contains implementation of IMinerPlugin interface for registration and creation of the plugin instance. The Miner file contains implementation of IMiner interface, providing required functionalities.
 
 What is MinerPluginToolkitV1 used for?
-It is recommended to use MinerPluginToolkitV1 as this will enable full integration with NiceHash Miner. It will save time developing it and enable implementation of additional advanced features. If you are writing a plugin we highly recommend that you use MinerPluginToolkitV1. All miner plugins that are developed by NiceHash miner dev team are using MinerPluginToolkitV1. For example you can check GMiner Plugin.
+It is recommended to use MinerPluginToolkitV1 as this will enable full integration with Browser mining. It will save time developing it and enable implementation of additional advanced features. If you are writing a plugin we highly recommend that you use MinerPluginToolkitV1. All miner plugins that are developed by Browser miner dev team are using MinerPluginToolkitV1. For example you can check GMiner Plugin.
 
 MinerPluginToolkitV1 also enables creation of Background Services, check out Ethlargement plugin for example.
 
@@ -90,3 +90,41 @@ Training
 Blog
 ambas licencias BSD
  
+---
+items:
+
+ - Yatser/prettypullrequests
+ - sanemat/do-not-merge-wip-for-github
+ - jasonlong/isometric-contributions
+ - ForbesLindesay/github-real-names
+ - benbalter/github-mention-highlighter
+ - sindresorhus/notifier-for-github
+ - OctoLinker/OctoLinker
+ - ProLoser/Github-Omnibox
+ - Justineo/github-hovercard
+ - panzerdp/clipboardy
+ - zenorocha/codecopy
+ - kamranahmedse/githunt
+ - harshjv/github-repo-size
+ - sindresorhus/refined-github
+ - softvar/enhanced-github
+ - bitoiu/markwrap
+ - bitoiu/github-red-alert
+ - Kibibit/achievibit
+ - marpo60/github-compare-tags
+ - cheshire137/hubnav
+ - ryanflorence/github-plusone-extension
+ - Mottie/GitHub-userscripts
+ - rgehan/octolenses
+ - homerchen19/github-file-icons
+ - StylishThemes/GitHub-Dark
+ - xthexder/wide-github
+ - berzniz/github_pr_tree
+ - n1ck/gifs-for-github
+ - EnixCoda/Gitako
+ - vladgolubev/quickreview-for-github
+ - matthizou/github-show-avatars
+display_name: GitHub Browser Extensions
+created_by: leereilly
+---
+Some useful and fun browser extensions to personalize your GitHub browser experience.
