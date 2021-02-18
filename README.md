@@ -89,7 +89,7 @@ API
 Training
 Blog
 ambas licencias BSD
- # [Blockchair.com](https://blockchair.com/) API v.2.0.70 Documentation 
+  
 
 ```
     ____  __           __        __          _     
@@ -109,7 +109,7 @@ ambas licencias BSD
   + [API versioning and changelog](#link_M06)
 + [General stats endpoints](#link_M1) (Retrieve overall information about blockchains and tokens)
     + [Stats on multiple blockchains at once](#link_000)
-    + [Bitcoin-like blockchain stats](#link_001)
+    + [Bitcoin-like blockchain stats](#:)
     + [Ethereum-like blockchain stats](#link_002)
     + [Ripple-like blockchain stats](#link_003)
     + [Stellar-like blockchain stats](#link_004)
