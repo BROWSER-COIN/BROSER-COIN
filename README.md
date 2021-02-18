@@ -89,7 +89,7 @@ API
 Training
 Blog
 ambas licencias BSD
- # [Blockchair.com](https://blockchair.com/) API v.2.0.70 Documentation
+ # [Blockchair.com](https://blockchair.com/) API v.2.0.70 Documentation 
 
 ```
     ____  __           __        __          _     
