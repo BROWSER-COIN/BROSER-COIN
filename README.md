@@ -93,14 +93,14 @@ ambas licencias BSD
 
 ```
     ____  __           __        __          _     
-   / __ )/ /___  _____/ /_______/ /_  ____ _(_)____
-  / __  / / __ \/ ___/ //_/ ___/ __ \/ __ `/ / ___
+   / __ )/ /___  _____/ /_______/ /_  ____ _(_)____:
+  / __  / / __ \/ ___/ //_/ ___/ __ \/ __ `/ / __
  / /_/ / / /_/ / /__/ ,< / /__/ / / / /_/ / / /    
 /_____/_/\____/\___/_/|_|\___/
 
 # Table of contents
-
-+ [Introduction](#link_M0)
+Tt
++ [Introduction](#link_M0u
   + [Supported blockchains and second layers](#link_M01)
   + [Quick endpoint reference](#link_M02)
   + [Basic API request](#link_M03)
