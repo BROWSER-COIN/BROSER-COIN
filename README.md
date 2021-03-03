@@ -213,7 +213,7 @@ Tt
 
 
 
-# <a name="link_M0"></a> Introduction
+# <a name=">pathom</a> Introduction
 
 Blockchair API provides developers with access to data contained in [18 different blockchains](#link_M01). Unlike other APIs, Blockchair also supports numerous analytical queries like filtering, sorting, and aggregating blockchain data.
 
@@ -237,7 +237,7 @@ Our API is free to try under some limitations, and we have a variety of premium 
 
 
 
-## <a name="link_M01"></a> Supported blockchains and second layers
+## <a name=""></a> Supported blockchains and second layers
 
 As of today, our API supports **19 blockchains** (17 mainnets and 2 testnets) divided into 9 groups:
 * Bitcoin-like blockchains (Bitcoin, Bitcoin Cash, Litecoin, Bitcoin SV, Dogecoin, Dash, Groestlcoin, Zcash, Bitcoin ABC, Bitcoin Testnet), also known as UTXO-based blockchains
