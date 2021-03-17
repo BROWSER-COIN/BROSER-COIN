@@ -100,12 +100,12 @@ ambas licencias BSD
 
 # Table of contents
 Tt
-+ [Introduction](#link_M0u
-  + [Supported blockchains and second layers](#link_M01)
++ [Introduction](#
+  + [Supported  and second layers](#link_M01)
   + [Quick endpoint reference](#link_M02)
   + [Basic API request](#link_M03)
   + [Basic API response](#link_M04)
-  + [API rate limits, API keys, and Premium API](#link_M05)
+  + [API rate limits,  , and Premium ](#link_M05)
   + [API versioning and changelog](#link_M06)
 + [General stats endpoints](#link_M1) (Retrieve overall information about blockchains and tokens)
     + [Stats on multiple blockchains at once](#link_000)
@@ -203,7 +203,7 @@ Tt
     + [Release monitor](#link_511)
     + [Halvening countdown](#link_512)
     + [Premium API endpoints](#link_M51)
-      + [Premium API usage stats](#link_600)
+      + [Premium  usage stats](#link_600)
 + [Privacy-o-meter](#link_M6)
     + [Introduction](#link_700)
     + [Transaction privacy score](#link_702)
@@ -240,39 +240,39 @@ Our API is free to try under some limitations, and we have a variety of premium 
 ## <a name=""></a> Supported blockchains and second layers
 
 As of today, our API supports **19 blockchains** (17 mainnets and 2 testnets) divided into 9 groups:
-* Bitcoin-like blockchains (Bitcoin, Bitcoin Cash, Litecoin, Bitcoin SV, Dogecoin, Dash, Groestlcoin, Zcash, Bitcoin ABC, Bitcoin Testnet), also known as UTXO-based blockchains
-* Ethereum-like blockchains (Ethereum, Ethereum Goerli Testnet)
-* Ripple-like blockchains (Ripple)
-* Stellar-like blockchains (Stellar)
-* Monero-like blockchains (Monero)
-* Cardano-like blockchains (Cardano)
+* Bitcoin-like  (Bitcoin, Bitcoin Cash, Litecoin, Bitcoin SV, Dogecoin, Dash, Groestlcoin, Zcash, Bitcoin ABC, Bitcoin Testnet), also known as UTXO-based blockchains
+* Ethereum-like  (Ethereum, Ethereum Goerli Testnet)
+* Ripple-like  (Ripple)
+* Stellar-like  (Stellar)
+* Monero-like  (Monero)
+* Cardano-like  (Cardano)
 * Mixin-like DAGs (Mixin) — technically, it's a DAG rather than a blockchain, but for the sake of unification it may be mentioned as a blockchain further in this documentation
-* Tezos-like blockchains (Tezos)
-* EOS-like blockchains (EOS)
+* Tezos-like  (Tezos)
+* EOS-like  (EOS)
 
 Within a group, there's no or little difference between the set of available endpoints and their output. 
 
 Here's the list of available mainnets:
 
-| Blokchain | Group | API path prefix | Support status |
-|-----------|------|----------|-------------|
-| Bitcoin | Bitcoin-like | `https://api.blockchair.com/bitcoin` | Full support |
-| Bitcoin Cash | Bitcoin-like | `https://api.blockchair.com/bitcoin-cash` | Full support |
-| Ethereum | Ethereum-like | `https://api.blockchair.com/ethereum` | Full support |
-| Litecoin | Bitcoin-like | `https://api.blockchair.com/litecoin` | Full support |
-| Bitcoin SV | Bitcoin-like | `https://api.blockchair.com/bitcoin-sv` | Full support |
-| Dogecoin | Bitcoin-like | `https://api.blockchair.com/dogecoin` | Full support |
-| Dash | Bitcoin-like | `https://api.blockchair.com/dash` | Full support |
-| Ripple | Ripple-like | `https://api.blockchair.com/ripple` | Alpha mode, possible compatibility-breaking changes |
-| Groestlcoin | Bitcoin-like | `https://api.blockchair.com/groestlcoin` | Full support at least till January 1st, 2021 |
+|  | Group | API path prefix | Support status |
+|----------|------|----------|-------------|
+| Bitcoin | Bitcoin-like | `https://api..com/bitcoin` | Full support |
+| Bitcoin Cash | Bitcoin-like | `https://api..com/bitcoin-cash` | Full support |
+| Ethereum | Ethereum-like | `https://api..com/ethereum` | Full support |
+| Litecoin | Bitcoin-like | `https://api..com/litecoin` | Full support |
+| Bitcoin SV | Bitcoin-like | `https://api..com/bitcoin-sv` | Full support |
+| Dogecoin | Bitcoin-like | `https://api..com/dogecoin` | Full support |
+| Dash | Bitcoin-like | `https://api..com/dash` | Full support |
+| Ripple | Ripple-like | `https://api..com/ripple` | Alpha mode, possible compatibility-breaking changes |
+| Groestlcoin | Bitcoin-like | `https://api..com/groestlcoin` | Full support at least till January 1st, 2021 |
 | Stellar | Stellar-like | `https://api.blockchair.com/stellar` | Alpha mode, possible compatibility-breaking changes |
-| Monero | Monero-like | `https://api.blockchair.com/monero` | Alpha mode, possible compatibility-breaking changes |
-| Cardano | Cardano-like | `https://api.blockchair.com/cardano` | Alpha mode, possible compatibility-breaking changes |
-| Zcash | Bitcoin-like | `https://api.blockchair.com/zcash` | Full support |
-| Mixin | Mixin-like | `https://api.blockchair.com/mixin` | Full support at least till April 24th, 2021 |
-| Tezos | Tezos-like | `https://api.blockchair.com/tezos` | Alpha mode, possible compatibility-breaking changes |
-| EOS | EOS-like | `https://api.blockchair.com/eos` | Alpha mode, possible compatibility-breaking changes |
-| Bitcoin ABC | Bitcoin-like | `https://api.blockchair.com/bitcoin-abc` | Beta mode, possible instability. Also known as Bitcoin Cash ABC. |
+| Monero | Monero-like | `https://api..com/monero` | Alpha mode, possible compatibility-breaking changes |
+| Cardano | Cardano-like | `https://api..com/cardano` | Alpha mode, possible compatibility-breaking changes |
+| Zcash | Bitcoin-like | `https://api..com/zcash` | Full support |
+| Mixin | Mixin-like | `https://api./mixin` | Full support at least till April 24th, 2021 |
+| Tezos | Tezos-like | `https://api..com/tezos` | Alpha mode, possible compatibility-breaking changes |
+| EOS | EOS-like | `https://api..com/eos` | Alpha mode, possible compatibility-breaking changes |
+| Bitcoin ABC | Bitcoin-like | `https://api..com/bitcoin-abc` | Beta mode, possible instability. Also known as Bitcoin Cash ABC. |
 
 Please read our statement on the November 15th, 2020 Bitcoin Cash split: https://twitter.com/Blockchair/status/1324424632179576832. It is expected that Bitcoin ABC's hashrate will be very low so 51% attacks are possible. We'll be running Bitcoin ABC in beta mode and we don't guarantee neither its stability, nor that we'll run it if the chain won't be used by businesses. Once the situation becomes more stable we'll update the documentation. At the moment, other parts of the documentation don't reflect Bitcoin ABC support, so please assume that for every `bitcoin-cash` endpoint there's a `bitcoin-abc` equivalent except for `https://api.blockchair.com/bitcoin-cash/nodes`.
 
@@ -280,16 +280,16 @@ There are also following testnets supported which are technically considered as 
 
 | Blokchain | Group | API path prefix | Support status |
 |-----------|------|----------|-------------|
-| Bitcoin Testnet | Bitcoin-like | `https://api.blockchair.com/bitcoin/testnet` | Full support |
+| Bitcoin Testnet | Bitcoin-like | `https://api..com/bitcoin/testnet` | Full support |
 | Ethereum Goerli Testnet | Ethereum-like | `https://api.blockchair.com/ethereum/testnet` | Development mode, no guaranteed stability |
 
-We aim to support more blockchains (and their testnets) in future to cover as many users as possible. We don't disclose which blockchains we'll add next and how we choose them, but our main markers are daily number of real transactions and market capitalization. If you're representing a coin community which would like to add its blockchain to our platform, we'd be happy to talk.
+We aim to support more  (and their testnets) in future to cover as many users as possible. We don't disclose which blockchains we'll add next and how we choose them, but our main markers are daily number of real transactions and market capitalization. If you're representing a coin community which would like to add its blockchain to our platform, we'd be happy to talk.
 
 As a general rule, if we add a blockchain to our platform, it means we'll support it and related functions indefinitely. However, there are some exceptions:
 
-* Since a blockchain system can be an unstable product, we may cease support in case the blockchain itself (or the node software we're using) stops to function or starts to function improperly;
-* If a blockchain hard-forks and that results in a new ruleset we can't support for technical or other reasons, we may either drop support for this blockchain, or don't accept the new ruleset;
-* If a blockchain is community-backed, we guarantee support till some specified date (this is reflected in the tables above). If its community decides not to prolong the agreement with Blockchair after that date, we may either continue to support that blockchain for free, or drop support for it;
+* Since a  system can be an unstable product, we may cease support in case the  itself (or the node software we're using) stops to function or starts to function improperly;
+* If a  hard- and that results in a new ruleset we can't support for technical or other reasons, we may either drop support for this blockchain, or don't accept the new ruleset;
+* If a  is community-backed, we guarantee support till some specified date (this is reflected in the tables above). If its community decides not to prolong the agreement with Blockchair after that date, we may either continue to support that blockchain for free, or drop support for it;
 * If we see that a particular blockchain became unpopular on our platform, we may terminate its support with a 3 month notice.
 
 For some of the blockchains we support we don't store full historical data. These blockchains are: `Ripple`, `Stellar`, `EOS`. That means you won't be able to query some old blocks, and the transaction list for an address may not show some old transactions. See [Available block ranges](#link_510) API endpoint to get data on which blocks are available in these blockchains. All other blockchains have full historical data. It's our intent to have full historical data for all blockchains.
@@ -301,10 +301,10 @@ Blockchair API also supports **2 layer 2 solutions** (tokens) divided into 2 gro
 
 Like with blockchains, within a group, there's no or little difference between the available endpoints. 
 
-| Layer 2    | Group       | Parent blockchain | API path prefix                                    | Support status                                   |
+| Layer 2    | Group       | Parent  | API path prefix                                    | Support status                                   |
 | ---------- | ----------- | ----------------- | -------------------------------------------------- | ------------------------------------------------ |
-| Omni Layer | Omni-like   | Bitcoin           | `https://api.blockchair.com/bitcoin/omni`          | Alpha support                                    |
-| ERC-20     | ERC-20-like | Ethereum          | `https://api.blockchair.com/ethereum/erc-20`       | Beta support                                     |
+| Omni Layer | Omni-like   | Bitcoin           | `https://api..com/bitcoin/omni`          | Alpha support                                    |
+| ERC-20     | ERC-20-like | Ethereum          | `https://api..com/ethereum/erc-20`       | Beta support                                     |
 
 We also plan to bring ERC-721 support in the future.
 
@@ -333,116 +333,109 @@ This is the full list of available API endpoints.
 | **General stats** | — | — | — |
 | `https://api.blockchair.com/stats`              | [👉](#link_000) | `1` | Stable |
 | `https://api.blockchair.com/{:btc_chain}/stats` | [👉](#link_001) | `1` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/stats` | [👉](#link_002) | `1` | Stable |
-| `https://api.blockchair.com/{:xrp_chain}/stats` | [👉](#link_003) | `1` | Stable |
-| `https://api.blockchair.com/{:xlm_chain}/stats` | [👉](#link_004) | `1` | Stable |
-| `https://api.blockchair.com/{:xmr_chain}/stats` | [👉](#link_006) | `1` | Stable |
+| `https://api..com/{:eth_chain}/stats` | [👉](#link_002) | `1` | Stable |
+| `https://api..com/{:xrp_chain}/stats` | [👉](#link_003) | `1` | Stable |
+| `https://api..com/{:xlm_chain}/stats` | [👉](#link_004) | `1` | Stable |
+| `https://api..com/{:}/stats` | [👉](#link_006) | `1` | Stable |
 | `https://api.blockchair.com/{:ada_chain}/stats` | [👉](#link_007) | `1` | Stable |
-| `https://api.blockchair.com/{:xin_chain}/stats` | [👉](#link_008) | `1` | Stable |
-| `https://api.blockchair.com/{:xtz_chain}/stats` | [👉](#link_009) | `1` | Stable |
-| `https://api.blockchair.com/{:eos_chain}/stats` | [👉](#link_010) | `1` | Stable |
-| **Block-related information** | — | — | — |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/block/{:height}₀` | [👉](#link_100) | `1` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/block/{:hash}₀` | [👉](#link_100) | `1` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/blocks/{:height}₀,...,{:height}ᵩ` | [👉](#link_100) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/blocks/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_100) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/raw/block/{:height}₀` | [👉](#link_101) | `1` | Unstable |
-| `https://api.blockchair.com/{:btc_chain}/raw/block/{:hash}₀` | [👉](#link_101) | `1` | Unstable |
-| `https://api.blockchair.com/{:btc_chain}/blocks?{:query}` | [👉](#link_102) | `2` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/block/{:height}₀` | [👉](#link_103) | `1` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/block/{:hash}₀` | [👉](#link_103) | `1` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/blocks/{:height}₀,...,{:height}ᵩ` | [👉](#link_103) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/blocks/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_103) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/raw/block/{:height}₀` | [👉](#link_104) | `1` | Unstable |
-| `https://api.blockchair.com/{:eth_chain}/raw/block/{:hash}₀` | [👉](#link_104) | `1` | Unstable |
-| `https://api.blockchair.com/{:eth_chain}/blocks?{:query}` | [👉](#link_105) | `2` | Stable |
-| `https://api.blockchair.com/{:xrp_chain}/raw/ledger/{:height}₀` | [👉](#link_106) | `1` | Alpha |
+| `https://api./{:btc_chain}/dashboards/blocks/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_100) | `1 + 0.1*c` | Stable |
+| `https://api..com/{:btc_chain}/raw/block/{:height}₀` | [👉](#link_101) | `1` | Unstable |
+| `https://api..com/{:btc_chain}/raw/block/{:hash}₀` | [👉](#link_101) | `1` | Unstable |
+| `https://api..com/{:btc_chain}/blocks?{:query}` | [👉](#link_102) | `2` | Stable |
+| `https://api..com/{:eth_chain}/dashboards/block/{:height}₀` | [👉](#link_103) | `1` | Stable |
+| `https://api..com/{:eth_chain}/dashboards/block/{:hash}₀` | [👉](#link_103) | `1` | Stable |
+| `https://api..com/{:eth_chain}/dashboards/blocks/{:height}₀,...,{:height}ᵩ` | [👉](#link_103) | `1 + 0.1*c` | Stable |
+| `https://api..com/{:eth_chain}/dashboards/blocks/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_103) | `1 + 0.1*c` | Stable |
+| `https://api..com/{:eth_chain}/raw/block/{:height}₀` | [👉](#link_104) | `1` | Unstable |
+| `https://api..com/{:eth_chain}/raw/block/{:hash}₀` | [👉](#link_104) | `1` | Unstable |
+| `https://api..com/{:eth_chain}/blocks?{:query}` | [👉](#link_105) | `2` | Stable |
+| `https://api..com/{:xrp_chain}/raw/ledger/{:height}₀` | [👉](#link_106) | `1` | Alpha |
 | `https://api.blockchair.com/{:xrp_chain}/raw/ledger/{:hash}₀` | [👉](#link_106) | `1` | Alpha |
-| `https://api.blockchair.com/{:xlm_chain}/raw/ledger/{:height}₀` | [👉](#link_107) | `1` | Alpha |
-| `https://api.blockchair.com/{:xmr_chain}/raw/block/{:height}₀` | [👉](#link_109) | `1` | Alpha |
-| `https://api.blockchair.com/{:xmr_chain}/raw/block/{:hash}₀` | [👉](#link_109) | `1` | Alpha |
-| `https://api.blockchair.com/{:ada_chain}/raw/block/{:height}₀` | [👉](#link_110) | `1` | Alpha |
-| `https://api.blockchair.com/{:ada_chain}/raw/block/{:hash}₀` | [👉](#link_110) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/snapshot/{:height}₀` | [👉](#link_111) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/snapshot/{:hash}₀` | [👉](#link_111) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/snapshots?{:query}` | [👉](#link_407) | `1` | Alpha |
-| `https://api.blockchair.com/{:xtz_chain}/raw/block/{:height}₀` | [👉](#link_112) | `1` | Alpha |
-| `https://api.blockchair.com/{:xtz_chain}/raw/block/{:hash}₀` | [👉](#link_112) | `1` | Alpha |
+| `https://api..com/:xlm_chain}/raw/ledger/{:height}₀` | [👉](#link_107) | `1` | Alpha |
+| `https://api..com/{:xmr_chain}/raw/block/{:height}₀` | [👉](#link_109) | `1` | Alpha |
+| `https://api..com/{xmr_chain}/raw/block/{:hash}₀` | [👉](#link_109) | `1` | Alpha |
+| `https://api..com/{:}/raw/block/{:height}₀` | [👉](#link_110) | `1` | Alpha |
+| `https://api..com/{:}/raw/block/{:hash}₀` | [👉](#link_110) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/snapshot/{:height}₀` | [👉](#link_111) | `1` | Alpha |
+| `https://api..com/{:}/raw/snapshot/{:hash}₀` | [👉](#link_111) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/snapshots?{:query}` | [👉](#link_407) | `1` | Alpha |
+| `https://api..com/{:xtz_chain}/raw/block/{:height}₀` | [👉](#link_112) | `1` | Alpha |
+| `https://api..com/{:xtz_chain}/raw/block/{:hash}₀` | [👉](#link_112) | `1` | Alpha |
 | `https://api.blockchair.com/{:xtz_chain}/raw/blocks?{:query}` | [👉](#link_410) | `1` | Alpha |
 | `https://api.blockchair.com/{:eos_chain}/raw/block/{:height}₀` | [👉](#link_113) | `1` | Alpha |
 | **Transaction-related information and actions** | — | — | — |
 | `https://api.blockchair.com/{:btc_chain}/dashboards/transaction/{:hash}₀` | [👉](#link_200) | `1` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/transactions/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_200) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/raw/transaction/{:hash}₀` | [👉](#link_201) | `1` | Unstable |
-| `https://api.blockchair.com/{:btc_chain}/push/transaction` (`POST`) | [👉](#link_202) | `1` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/transactions?{:query}` | [👉](#link_203) | `5` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/mempool/transactions?{:query}` | [👉](#link_203) | `2` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/transaction/{:hash}₀` | [👉](#link_204) | `1` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/transactions/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_204) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/raw/transaction/{:hash}₀` | [👉](#link_205) | `1` | Unstable |
-| `https://api.blockchair.com/{:eth_chain}/push/transaction` (`POST`) | [👉](#link_202) | `1` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/transactions?{:query}` | [👉](#link_206) | `5` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/mempool/transactions?{:query}` | [👉](#link_206) | `2` | Stable |
-| `https://api.blockchair.com/{:xrp_chain}/raw/transaction/{:hash}₀` | [👉](#link_207) | `1` | Alpha |
-| `https://api.blockchair.com/{:xlm_chain}/raw/transaction/{:hash}₀` | [👉](#link_208) | `1` | Alpha |
-| `https://api.blockchair.com/{:xmr_chain}/raw/transaction/{:hash}₀` | [👉](#link_210) | `1` | Alpha |
-| `https://api.blockchair.com/{:ada_chain}/raw/transaction/{:hash}₀` | [👉](#link_211) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/transaction/{:hash}₀` | [👉](#link_212) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/push/transaction` (`POST`) | [👉](#link_202) | `1` | Stable |
-| `https://api.blockchair.com/{:xtz_chain}/raw/operation/{:hash}₀` | [👉](#link_213) | `1` | Alpha |
-| `https://api.blockchair.com/{:eos_chain}/raw/transaction/{:hash}₀` | [👉](#link_214) | `1` | Alpha |
-| `https://api.blockchair.com/{:eos_chain}/raw/transaction/({:block_height},{:hash})` | [👉](#link_214) | `1` | Alpha |
+| `https://api..com/{:btc_chain}/dashboards/transactions/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_200) | `1 + 0.1*c` | Stable |
+| `https://api..com/{:btc_chain}/raw/transaction/{:hash}₀` | [👉](#link_201) | `1` | Unstable |
+| `https://api..com/{:}/push/transaction` (`POST`) | [👉](#link_202) | `1` | Stable |
+| `https://api..com/{:}/transactions?{:query}` | [👉](#link_203) | `5` | Stable |
+| `https://api..com/{:btc_chain}/mempool/transactions?{:query}` | [👉](#link_203) | `2` | Stable |
+| `https://api..com/{eth_chain}/dashboards/transaction/{:hash}₀` | [👉](#link_204) | `1` | Stable |
+| `https://api..com/{:eth_chain}/dashboards/transactions/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_204) | `1 + 0.1*c` | Stable |
+| `https://api..com/{:eth_chain}/raw/transaction/{:hash}₀` | [👉](#link_205) | `1` | Unstable |
+| `https://api..com/{:eth_chain}/push/transaction` (`POST`) | [👉](#link_202) | `1` | Stable |
+| `https://api..com/{:eth_chain}/transactions?{:query}` | [👉](#link_206) | `5` | Stable |
+| `https://api..com/{:eth_chain}/mempool/transactions?{:query}` | [👉](#link_206) | `2` | Stable |
+| `https://api..com/{:xrp_chain}/raw/transaction/{:hash}₀` | [👉](#link_207) | `1` | Alpha |
+| `https://api..com/{:xlm_chain}/raw/transaction/{:hash}₀` | [👉](#link_208) | `1` | Alpha |
+| `https://api..com/{:xmr_chain}/raw/transaction/{:hash}₀` | [👉](#link_210) | `1` | Alpha |
+| `https://api..com/{:}/raw/transaction/{:hash}₀` | [👉](#link_211) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/transaction/{:hash}₀` | [👉](#link_212) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/push/transaction` (`POST`) | [👉](#link_202) | `1` | Stable |
+| `https://api..com/{:xtz_chain}/raw/operation/{:hash}₀` | [👉](#link_213) | `1` | Alpha |
+| `https://api..com/{:eos_chain}/raw/transaction/{:hash}₀` | [👉](#link_214) | `1` | Alpha |
+| `https://api..com/{:eos_chain}/raw/transaction/({:block_height},{:hash})` | [👉](#link_214) | `1` | Alpha |
 | **Address-related information** | — | — | — |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/address/{:address}₀` | [👉](#link_300) | `1` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/addresses/{:address}₀,...,{:address}ᵩ` | [👉](#link_300) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/addresses/balances` (`POST`, mass balance check) | [👉](#link_390) | `1 + 0.001*c` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/dashboards/xpub/{:extended_key}` | [👉](#link_300) | `1 + 0.1*d` | Beta |
-| `https://api.blockchair.com/{:btc_chain}/addresses?{:query}` | [👉](#link_301) | `2` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/address/{:address}₀` | [👉](#link_302) | `1` | Stable |
-| `https://api.blockchair.com/{:xrp_chain}/raw/account/{:address}₀` | [👉](#link_303) | `1` | Alpha |
-| `https://api.blockchair.com/{:xlm_chain}/raw/account/{:address}₀` | [👉](#link_304) | `1` | Alpha |
-| `https://api.blockchair.com/{:ada_chain}/raw/address/{:address}₀` | [👉](#link_307) | `1` | Alpha |
-| `https://api.blockchair.com/{:xtz_chain}/raw/account/{:address}₀` | [👉](#link_308) | `1` | Alpha |
-| `https://api.blockchair.com/{:eos_chain}/raw/account/{:address}₀` | [👉](#link_309) | `1` | Alpha |
-| `https://api.blockchair.com/multi/dashboards/addresses/{:address}₀,...,{:address}ᵩ` | [👉](#link_391) | Complex | Alpha |
+| `https://api..com/{:btc_chain}/dashboards/address/{:address}₀` | [👉](#link_300) | `1` | Stable |
+| `https://api..com/{:btc_chain}/dashboards/addresses/{:address}₀,...,{:address}ᵩ` | [👉](#link_300) | `1 + 0.1*c` | Stable |
+| `https://api..com/{:btc_chain}/addresses/balances` (`POST`, mass balance check) | [👉](#link_390) | `1 + 0.001*c` | Stable |
+| `https://api..com/:btc_chain}/dashboards/xpub/{:extended_key}` | [👉](#link_300) | `1 + 0.1*d` | Beta |
+| `https://api..com/{:btc_chain}/addresses?{:query}` | [👉](#link_301) | `2` | Stable |
+| `https://api..com/{:eth_chain}/dashboards/address/{:address}₀` | [👉](#link_302) | `1` | Stable |
+| `https://api..com/{:xrp_chain}/raw/account/{:address}₀` | [👉](#link_303) | `1` | Alpha |
+| `https://api..com/{:xlm_chain}/raw/account/{:address}₀` | [👉](#link_304) | `1` | Alpha |
+| `https://api..com/{:ada_chain}/raw/address/{:address}₀` | [👉](#link_307) | `1` | Alpha |
+| `https://api..com/{xtz_chain}/raw/account/{:address}₀` | [👉](#link_308) | `1` | Alpha |
+| `https://api..com/{:eos_chain}/raw/account/{:address}₀` | [👉](#link_309) | `1` | Alpha |
+| `https://api..com/multi/dashboards/addresses/{:address}₀,...,{:address}ᵩ` | [👉](#link_391) | Complex | Alpha |
 | **Special entities** | — | — | — |
-| `https://api.blockchair.com/{:btc_chain}/outputs?{:query}` | [👉](#link_400) | `10` | Beta |
-| `https://api.blockchair.com/{:btc_chain}/mempool/outputs?{:query}` | [👉](#link_400) | `2` | Beta |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/uncle/{:hash}₀` | [👉](#link_401) | `1` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/dashboards/uncles/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_401) | `1 + 0.1*c` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/uncles?{:query}` | [👉](#link_402) | `2` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/calls?{:query}` | [👉](#link_403) | `10` | Stable |
-| `https://api.blockchair.com/{:xmr_chain}/outputs?{:query}` | [👉](#link_306) | `1` | Alpha |
-| `https://api.blockchair.com/zcash/raw/validate?paymentdisclosure=zpd:...` | N/A | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/round/{:hash}` | [👉](#link_404) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/round/({:node_hash},{:id})` | [👉](#link_404) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/node/{:hash}` | [👉](#link_405) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/graph` | [👉](#link_406) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/mintings?{:query}` | [👉](#link_408) | `1` | Alpha |
-| `https://api.blockchair.com/{:xin_chain}/raw/nodes?{:query}` | [👉](#link_409) | `1` | Alpha |
+| `https://api..com/{:btc_chain}/outputs?{:query}` | [👉](#link_400) | `10` | Beta |
+| `https://api..com/{:}/mempool/outputs?{:query}` | [👉](#link_400) | `2` | Beta |
+| `https://api..com/{:eth_chain}/dashboards/uncle/{:hash}₀` | [👉](#link_401) | `1` | Stable |
+| `https://api..com/{:eth_chain}/dashboards/uncles/{:hash}₀,...,{:hash}ᵩ` | [👉](#link_401) | `1 + 0.1*c` | Stable |
+| `https://api..com/{:/uncles?{:query}` | [👉](#link_402) | `2` | Stable |
+| `https://api..com/:}/calls?{:query}` | [👉](#link_403) | `10` | Stable |
+| `https://api..com/{:xmr_chain}/outputs?{:query}` | [👉](#link_306) | `1` | Alpha |
+| `https://api..com/zcash/raw/validate?paymentdisclosure=zpd:...` | N/A | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/round/{:hash}` | [👉](#link_404) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/round/({:node_hash},{:id})` | [👉](#link_404) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/node/{:hash}` | [👉](#link_405) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/graph` | [👉](#link_406) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/mintings?{:query}` | [👉](#link_408) | `1` | Alpha |
+| `https://api..com/{:xin_chain}/raw/nodes?{:query}` | [👉](#link_409) | `1` | Alpha |
 | **Special second layer protocol endpoints (Omni Layer and ERC-20 tokens)** | — | — | — |
-| `https://api.blockchair.com/bitcoin/omni/stats` | [👉](#link_500) | `1` | Alpha |
-| `https://api.blockchair.com/bitcoin/omni/dashboards/property/{:prorerty_id}` | [👉](#link_501) | `1` | Alpha |
-| `https://api.blockchair.com/bitcoin/omni/properties` | [👉](#link_502) | `10` | Alpha |
-| `https://api.blockchair.com/ethereum/erc-20/{:token_address}/stats` | [👉](#link_503) | `1` | Beta |
-| `https://api.blockchair.com/ethereum/erc-20/{:token_address}/dashboards/address/{:address}` | [👉](#link_504) | `1` | Beta |
-| `https://api.blockchair.com/ethereum/erc-20/tokens?{:query}` | [👉](#link_505) | `2` | Beta |
-| `https://api.blockchair.com/ethereum/erc-20/transactions?{:query}` | [👉](#link_506) | `5` | Beta |
-| `https://api.blockchair.com/ethereum/erc-20/{:token_address}/utils/allowance?owner={:owner_address}&spender={:spender_address}` | N/A | `1` | Alpha |
+| `https://api..com/bitcoin/omni/stats` | [👉](#link_500) | `1` | Alpha |
+| `https://api..com/bitcoin/omni/dashboards/property/{:prorerty_id}` | [👉](#link_501) | `1` | Alpha |
+| `https://api..com//omni/properties` | [👉](#link_502) | `10` | Alpha |
+| `https://api..com/ethereum/erc-20/{:token_address}/stats` | [👉](#link_503) | `1` | Beta |
+| `https://api..com/ethereum/erc-20/{:token_address}/dashboards/address/{:address}` | [👉](#link_504) | `1` | Beta |
+| `https://api..com/ethereum/erc-20/tokens?{:query}` | [👉](#link_505) | `2` | Beta |
+| `https://api..com//erc-20/transactions?{:query}` | [👉](#link_506) | `5` | Beta |
+| `https://api..com/ethereum/erc-20/{:token_address}/utils/allowance?owner={:owner_address}&spender={:spender_address}` | N/A | `1` | Alpha |
 | **State changes** | — | — | — |
-| `https://api.blockchair.com/{:btc_chain}/state/changes/block/{:block_id}` | [👉](#link_507) | `5` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/state/changes/mempool` | [👉](#link_507) | `10` | Stable |
-| `https://api.blockchair.com/{:eth_chain}/state/changes/block/{:block_id}` | [👉](#link_507) | `5` | Stable |
+| `https://api..com/{:btc_chain}/state/changes/block/{:block_id}` | [👉](#link_507) | `5` | Stable |
+| `https://api..com/{:btc_chain}/state/changes/mempool` | [👉](#link_507) | `10` | Stable |
+| `https://api..com/{:eth_chain}/state/changes/block/{:block_id}` | [👉](#link_507) | `5` | Stable |
 | **Misc** | — | — | — |
-| `https://api.blockchair.com/range` | [👉](#link_510) | `1` | Stable |
-| `https://api.blockchair.com/tools/releases` | [👉](#link_511) | `1` | Stable |
-| `https://api.blockchair.com/tools/halvening` | [👉](#link_512) | `1` | Stable |
-| `https://api.blockchair.com/news` (News API) | [👉](#link_701) | `1` | Stable |
+| `https://api..com/range` | [👉](#link_510) | `1` | Stable |
+| `https://api..com/tools/releases` | [👉](#link_511) | `1` | Stable |
+| `https://api..com/tools/halvening` | [👉](#link_512) | `1` | Stable |
+| `https://api..com/news` (News API) | [👉](#link_701) | `1` | Stable |
 | **Network nodes** | — | — | — |
-| `https://api.blockchair.com/nodes` | [👉](#link_508) | `1` | Stable |
-| `https://api.blockchair.com/{:btc_chain}/nodes` | [👉](#link_508) | `1` | Stable |
+| `https://api..com/nodes` | [👉](#link_508) | `1` | Stable |
+| `https://api..com/{:btc_chain}/nodes` | [👉](#link_508) | `1` | Stable |
 | **Special Premium API endpoints** | — | — | — |
-| `https://api.blockchair.com/premium/stats?key={:api_key}` | [👉](#link_600) | `0` | Stable |
+| `https://api..com/premium/stats?key={:api_key}` | [👉](#link_600) | `0` | Stable |
 
 Please note there are some endpoints which aren't listed here (most of the times they have the `https://api.blockchair.com/internal` prefix), but used by our web interface — these endpoints aren't meant to be used by 3rd parties.
 
@@ -452,11 +445,11 @@ The base request cost is used only if there are no additional parameters include
 
 ## <a name="link_M03"></a> Basic API request
 
-Requests to the API should be made through the HTTPS protocol by GET requests to the domain `api.blockchair.com`. Here's an example request URL: `https://api.blockchair.com/bitcoin/blocks?a=sum(generation)`
+Requests to the API should be made through the HTTPS protocol by GET requests to the domain `api.blockchair.com`. Here's an example request URL: `https://api..com/bitcoin/blocks?a=sum(generation)`
 
 ```bash
-> curl 'https://api.blockchair.com/bitcoin/blocks?a=sum(generation)'
-{"data":[{"sum(generation)":1800957104497237}],"context":{"code":200,"source":"A","time":0.007825851440429688,"limit":10000,"offset":null,"rows":1,"pre_rows":1,"total_rows":1,"state":600767,"cache":{"live":true,"duration":60,"since":"2019-10-23 21:33:00","until":"2019-10-23 21:34:00","time":null},"api":{"version":"2.0.38","last_major_update":"2019-07-19 18:07:19","next_major_update":null,"documentation":"https:\/\/github.com\/Blockchair\/Blockchair.Support\/blob\/master\/API.md","notice":"Beginning July 19th, 2019 all applications using Blockchair API on a constant basis should apply for an API key (mailto:info@blockchair.com)"}}}
+> curl 'https://api..com/bitcoin/blocks?a=sum(generation)'
+{"data":[{"sum(generation)":1800957104497237}],"context":{"code":200,"source":"A","time":0.007825851440429688,"limit":10000,"offset":null,"rows":1,"pre_rows":1,"total_rows":1,"state":600767,"cache":{"live":true,"duration":60,"since":"2019-10-23 21:33:00","until":"2019-10-23 21:34:00","time":null},"api":{"version":"2.0.38","last_major_update":"2019-07-19 18:07:19","next_major_update":null,"documentation":"https:\/\/github.com\/\/.Support\/blob\/master\/API.md","":"Beginning July 19th, 2019 all applications using  API on a constant basis should apply for an API key (@.com)"}}}
 ```
 
 Here are some considerations:
