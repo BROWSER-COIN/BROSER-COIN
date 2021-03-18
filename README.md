@@ -456,7 +456,7 @@ Here are some considerations:
 
 * If you're building a web app, your users shouldn't make direct API requests from there. While we don't have any limitations in our CORS policy (API currently responds with a `Access-Control-Allow-Origin: *` header), that policy may be changed in the future without any warnings
 * Please don't use some random keys in your requests (e.g. `?random_key=random_value`) as this can result in a `400` error (though we don't force this rule at the moment for most of our endpoints)
-* If you're using the  with an  key, you should keep it in secret. In order to build an app for public use using our API, you should build a proxy, so the requrst flow will look like the following: `user → https://your-proxy/{:request_string} → https://api.blockchair.com/{:request_string}?key={:api_key}` — that way you won't disclose the key to your users
+* If you're using the  with an  key, you should keep it in secret. In order to build an app for public use using our API, you should build a proxy, so the requrst flow will look like the following: `user → https://your-proxy/{:request_string} → https://api..com/{:request_string}?key={:api_key}` — that way you won't disclose the key to your users
 * The only exception to the "requests should be made using GET" rule is the [Broadcasting transactions](#link_202) endpoint accepting POST requests
 
 
@@ -628,7 +628,7 @@ Description of the fields is available in the next three sections of documentati
 
 **Example output:**
 
-`https://api.blockchair.com/stats`:
+`https://api..com/stats`:
 
 ```json
 {
@@ -747,15 +747,15 @@ Always `1`.
 
 **Endpoints:**
 
-* `https://api.blockchair.com/bitcoin/stats`
-* `https://api.blockchair.com/bitcoin-cash/stats`
-* `https://api.blockchair.com/litecoin/stats`
-* `https://api.blockchair.com/bitcoin-sv/stats`
-* `https://api.blockchair.com/dogecoin/stats`
-* `https://api.blockchair.com/dash/stats`
-* `https://api.blockchair.com/groestlcoin/stats`
-* `https://api.blockchair.com/zcash/stats`
-* `https://api.blockchair.com/bitcoin/testnet/stats`
+* `https://api..com/bitcoin/stats`
+* `https://api..com/bitcoin-cash/stats`
+* `https://api..com/litecoin/stats`
+* `https://api..com/bitcoin-sv/stats`
+* `https://api..com/dogecoin/stats`
+* `https://api..com/dash/stats`
+* `https://api..com/groestlcoin/stats`
+* `https://api..com/zcash/stats`
+* `https://api..com/bitcoin/testnet/stats`
 
 **Output:**
 
@@ -861,15 +861,15 @@ Always `1`.
 
 **Explore visualizations on our front-end:**
 
-- https://blockchair.com/bitcoin
-- https://blockchair.com/bitcoin-cash
-- https://blockchair.com/litecoin
-- https://blockchair.com/bitcoin-sv
-- https://blockchair.com/dogecoin
-- https://blockchair.com/dash
-- https://blockchair.com/groestlcoin
-- https://blockchair.com/zcash
-- https://blockchair.com/bitcoin/testnet
+- https://.com/bitcoin
+- https://.com/bitcoin-cash
+- https://.com/litecoin
+- https://.com/bitcoin-sv
+- https://.com/dogecoin
+- https://.com/dash
+- https://.com/groestlcoin
+- https://.com/zcash
+- https://.com/bitcoin/testnet
 
 
 
@@ -879,19 +879,19 @@ Always `1`.
 
 **Endpoints:**
 
-- `https://api.blockchair.com/ethereum/stats`
-- `https://api.blockchair.com/ethereum/testnet/stats`
+- `https://api..com/ethereum/stats`
+- `https://api..com/ethereum/testnet/stats`
 
 **Output:**
 
-`data` contains an array with blockchain statistics:
+`data` contains an array with  statistics:
 
 - `blocks` — total number of blocks (note that it's 1 more than the latest block number as there is block #0)
 - `uncles` — total number of uncles
 - `transactions` — total number of transactions
 - `calls` — total number of internal calls
 - `circulation_approximate` — number of coins in circulation (in wei)
-- `blockchain_size` — total size of all blocks in bytes (note: it's not the size of a full node, it's just bare blocks; nodes are bigger in size as they use database indexing, etc)
+- `` — total size of all blocks in bytes (note: it's not the size of a full node, it's just bare blocks; nodes are bigger in size as they use database indexing, etc)
 - `difficulty` — current mining difficulty
 - `hashrate_24h` — approximated hashrate over the last 24 hours (returned as a string as it doesn't fit into an integer)
 - `best_block_height` — the latest block height
@@ -930,7 +930,7 @@ Always `1`.
 
 **Example output:**
 
-`https://api.blockchair.com/ethereum/stats`:
+`https://api..com/ethereum/stats`:
 
 ```json
 {
@@ -3780,7 +3780,7 @@ Where `{:id}ᵢ` is either `{:height}ᵢ` or `{:hash}ᵢ` from the query string.
         "gasUsed": "0x19a28",
         "hash": "0xda214d1b1d458e7ae0e626b69a52a59d19762c51a53ff64813c4d31256282fdf",
         "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-        "miner": "0x4bb96091ee9d802ed039c4d1a5f6216f90f81b01",
+        "miner": "0xe92A52398E068941D9aC03E001e14aF636bcB2F3",
         "mixHash": "0xf5b95f5b79cd8425db7f04d200d78d16c104c28d078d0b653ae1c24f31759662",
         "nonce": "0x0975348010868c22",
         "number": "0x23cace",
@@ -3792,13 +3792,13 @@ Where `{:id}ᵢ` is either `{:height}ᵢ` or `{:hash}ᵢ` from the query string.
         "timestamp": "0x57ec70dd",
         "totalDifficulty": "0x3a0f803ebc49e50af",
         "transactions": [
-          "0x4052841e7ff856e08e73245ed1fab5f41021d4bfe83202b6581870cb559b44c4",
-          "0xa1ed63865958a1b3abc8e259dc980bd76dd3f989f14577cce18b7e265cf9528e",
-          "0x1d6713c7e6be2a45e6b3d2a7dfc1af96443cfb65d4b51cd41ac21b7b840e77e0",
-          "0xffbcdcbef6c5341dd60a9b7f182b61cf0c468d63defcc2fa8c56e292d4bfc8d6",
-          "0x0c79e3ae36150eb36d6a631cc8d6250db4b9b832a82ac58ea356357f5987debe"
+          "0x8d9Dc02b05A5714467E7ecD7c708518271943E5B",
+          "0xB22100730E3B387D64d5eFf63500d2064Da27b12",
+          "0x8c39f43BDB1a7315aA15b861641d093Bd4F43dD1",
+          "0xa2C94514AF2868363b5436AF66F64908FaCe4625",
+          "0x132EEE7a8e6fafeeD51E78F1c1Ab104cB8498073"
         ],
-        "transactionsRoot": "0xdde4d2ce7556effca10c868f500f0e47fb09b5cb4a003d781080f1a06e582352",
+        "transactionsRoot": "0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664",
         "uncles": []
       }
     }
@@ -3846,11 +3846,11 @@ If there's no `{:hash}ᵢ` has been found on the blockchain, returns an empty ar
 
 **Example requests:**
 
-- `https://api..com/ethereum/raw/transaction/0x93fa9a3ac6190022adc75d1d83e3d86e0a99ac1eb88f80fec59599f55931766e`
+- `https://api..com/ethereum/raw/transaction/0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664`
 
 **Example output:**
 
-`https://api..com/ethereum/raw/transaction/0x93fa9a3ac6190022adc75d1d83e3d86e0a99ac1eb88f80fec59599f55931766e`:
+`https://api..com/ethereum/raw/transaction/0x5b579DEbCD8f1cE2d5BA30Db13E72234Cb3D8664`:
 
 ```json
 {
