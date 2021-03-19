@@ -281,7 +281,7 @@ There are also following testnets supported which are technically considered as 
 | Blokchain | Group | API path prefix | Support status |
 |-----------|------|----------|-------------|
 | Bitcoin Testnet | Bitcoin-like | `https://api..com/bitcoin/testnet` | Full support |
-| Ethereum Goerli Testnet | Ethereum-like | `https://api.blockchair.com/ethereum/testnet` | Development mode, no guaranteed stability |
+| Ethereum Goerli Testnet | Ethereum-like | `https://api.no.com/ethereum/testnet` | Development mode, no guaranteed stability |
 
 We aim to support more  (and their testnets) in future to cover as many users as possible. We don't disclose which blockchains we'll add next and how we choose them, but our main markers are daily number of real transactions and market capitalization. If you're representing a coin community which would like to add its blockchain to our platform, we'd be happy to talk.
 
@@ -350,7 +350,7 @@ This is the full list of available API endpoints.
 | `https://api..com/{:eth_chain}/raw/block/{:hash}₀` | [👉](#link_104) | `1` | Unstable |
 | `https://api..com/{:eth_chain}/blocks?{:query}` | [👉](#link_105) | `2` | Stable |
 | `https://api..com/{:xrp_chain}/raw/ledger/{:height}₀` | [👉](#link_106) | `1` | Alpha |
-| `https://api.blockchair.com/{:xrp_chain}/raw/ledger/{:hash}₀` | [👉](#link_106) | `1` | Alpha |
+| `https://api..com/{:xrp_chain}/raw/ledger/{:hash}₀` | [👉](#link_106) | `1` | Alpha |
 | `https://api..com/:xlm_chain}/raw/ledger/{:height}₀` | [👉](#link_107) | `1` | Alpha |
 | `https://api..com/{:xmr_chain}/raw/block/{:height}₀` | [👉](#link_109) | `1` | Alpha |
 | `https://api..com/{xmr_chain}/raw/block/{:hash}₀` | [👉](#link_109) | `1` | Alpha |
@@ -511,9 +511,9 @@ Here's our policy:
 - If you use our API occasionally for personal use or testing up to 1440 requests a day (1 request a minute in average) — a key is not required
 - Non-commercial and academic projects which require up to 1440 requests a day — a key is not required
 - Non-commercial and academic projects requiring more than 1440 requests a day should apply for a Premium API key, and are subject to a discount up to 50%
-- Non-commercial and academic projects requiring more than 1440 requests a day which are also Blockchair partners are subject to a discount up to 100%
+- Non-commercial and academic projects requiring more than 1440 requests a day which are also  partners are subject to a discount up to 100%
 - Commercial projects should apply for a key to Premium API not depending on the required number of requests
-- Commercial projects which are also Blockchair partners (e.g. linking to Blockchair from the app's interface) are subject to a discount up to 10%
+- Commercial projects which are also  partners (e.g. linking to Blockchair from the app's interface) are subject to a discount up to 10%
 
 |                                | Up to 1440 requests a day | More than 1440 requests a day        |
 | ------------------------------ | ------------------------- | ------------------------------------ |
@@ -550,11 +550,11 @@ Our Premium API dashboard is available here: https://api..com/
 
 First, you need to choose a suitable plan: https://.com/
 
-At the moment, this automated system accepts PayPal payments only (which also allows you to pay with your card). If you'd like to pay via wire transfer or crypto, please contact us at [info@blockchair.com](mailto:info@blockchair.com)
+At the moment, this automated system accepts PayPal payments only (which also allows you to pay with your card). If you'd like to pay via wire transfer or crypto, please contact us at [@.com](@.com)
 
-Once you've paid, you will receive a one-time password which can be used to generate and activate your API key. Enter it on [this page](https://api.blockchair.com/premium) into the "I want to activate an API key I've just purchased..." form, then fill in a small form about yourself, and you'll get the key.
+Once you've paid, you will receive a one-time password which can be used to generate and activate your API key. Enter it on [this page](https://api..com/premium) into the "I want to activate an API key I've just purchased..." form, then fill in a small form about yourself, and you'll get the key.
 
-After you have received a key, you can track your stats and extend your subscription. Enter your API key on [this page](https://api.blockchair.com/premium) into the "I already have an API key and would like to see some stats or extend my subscription..." form. If you'd like to extend your subscription, you'd need to buy a one-time extension password and enter it on your key management page.
+After you have received a key, you can track your stats and extend your subscription. Enter your API key on [this page](https://api..com/premium) into the "I already have an API key and would like to see some stats or extend my subscription..." form. If you'd like to extend your subscription, you'd need to buy a one-time extension password and enter it on your key management page.
 
 If you have any questions about how to buy and use your key, you can always [contact us](#link_M7).
 
@@ -562,9 +562,9 @@ If you have any questions about how to buy and use your key, you can always [con
 
 * `https://api..com/bitcoin/dashboards/block/0?key=myfirstpasswordwas4321andifeltsmartaboutit`
 
-* `https://api.blockchair.com/bitcoin/dashboards/block/0?limit=0&key=myfirstpasswordwas4321andifeltsmartaboutit`
+* `https://api..com/bitcoin/dashboards/block/0?limit=0&key=myfirstpasswordwas4321andifeltsmartaboutit`
 
-* `https://api.blockchair.com/bitcoin/dashboards/block/0?key=myfirstpasswordwas4321andifeltsmartaboutit&limit=0`
+* `https://api..com/bitcoin/dashboards/block/0?key=myfirstpasswordwas4321andifeltsmartaboutit&limit=0`
 
 There's an extra API endpoint for those who have an API key allowing to [track the number of request made](#link_600).
 
@@ -582,7 +582,7 @@ As a reminder, there's the `context.api` array in every API response which conta
 
 When we change something, or add new functions, we bump the API version number. Generally, we try as hard as possible not to bring any compatibility-breaking changes in API updates, but sometimes this is needed as some blockchains change their features themselves, we're fixing various bugs, etc. This doesn't apply, however, to changes to endpoints which are either marked as alpha- or beta-stage functions, or unstable in nature (e.g. all raw endpoints where the API returns data directly from our nodes, and the response may change as we upgrade the nodes). These marks are reflected in the [Quick endpoint reference](#link_M02).
 
-**The changelog is available here: [https://github.com/Blockchair/Blockchair.Support/blob/master/API.md](https://github.com/Blockchair/Blockchair.Support/blob/master/API.md)**
+**The changelog is available here: [https://github.com/Blockchair/Blockchair.Support/blob/master/API.md](https://github.com//.Support/blob/master/API.md)**
 
 It makes sense to check if `context.api.version` has increased and/or just whether `context.api.next_major_update` is not `null` or larger than the latest update date known to you. If that's the case — you can send yourself a notification and review the changelog to make your application compatible with the changes starting from `context.api.next_major_update`.
 
@@ -598,7 +598,7 @@ Allows to retrieve the most important stats on all blockchains we support via ju
 
 **Endpoint:**
 
-- `https://api.blockchair.com/stats`
+- `https://api..com/stats`
 
 If you require data on just one blockchain, please use `https://api.blockchair.com/{:chain}/stats` instead.
 
@@ -738,8 +738,8 @@ Always `1`.
 
 **Explore visualizations on our front-end:**
 
-- https://blockchair.com/
-- https://blockchair.com/compare
+- https://.com/
+- https://.com/compare
 
 
 
@@ -799,7 +799,7 @@ Always `1`.
 
 **Example output:**
 
-`https://api.blockchair.com/bitcoin/stats`:
+`https://api..com/bitcoin/stats`:
 
 ```json
 {
@@ -2674,12 +2674,12 @@ Note that the total number of transactions in the block is contained in `data.{:
 
 **Request cost formula:**
 
-- `1` for `https://api.blockchair.com/{:eth_chain}/dashboards/block/{:height}₀` and `https://api.blockchair.com/{:eth_chain}/dashboards/block/{:hash}₀ `endpoints
-- `1 + (0.1 * (entity count - 1))`  for `https://api.blockchair.com/{:eth_chain}/dashboards/blocks/{:height}₀,...,{:height}ᵩ` and `https://api.blockchair.com/{:eth_chain}/dashboards/blocks/{:hash}₀,...,{:hash}ᵩ` endpoints (e.g. it's `1 + (0.1 * (10 - 1)) = 1.9` for requesting 10 blocks)
+- `1` for `https://api..com/{:eth_chain}/dashboards/block/{:height}₀` and `https://api..com/{:eth_chain}/dashboards/block/{:hash}₀ `endpoints
+- `1 + (0.1 * (entity count - 1))`  for `https://api..com/{:eth_chain}/dashboards/blocks/{:height}₀,...,{:height}ᵩ` and `https://api..com/{:eth_chain}/dashboards/blocks/{:hash}₀,...,{:hash}ᵩ` endpoints (e.g. it's `1 + (0.1 * (10 - 1)) = 1.9` for requesting 10 blocks)
 
 **Explore visualizations on our front-end:**
 
-- https://blockchair.com/ethereum/block/2345678
+- https://.com/ethereum/block/2345678
 
 
 
@@ -2712,12 +2712,12 @@ If there's no `{:hash}ᵢ` has been found in the database, there won't be such k
 
 **Example requests:**
 
-- `https://api..com/ethereum/dashboards/uncle/0x5cd50096dbb856a6d1befa6de8f9c20decb299f375154427d90761dc0b101109`
+- `https://api..com/ethereum/dashboards/uncle/0x8c39f43BDB1a7315aA15b861641d093Bd4F43dD1`
 - `https://api..com/ethereum/dashboards/uncles/0x5cd50096dbb856a6d1befa6de8f9c20decb299f375154427d90761dc0b101109,0xedc7a92c2a8aa140b0afa26db4ce8e05994a67d6fc3d736ddd77210b0ba565bb`
 
 **Example output:**
 
-`https://api.blockchair.com/ethereum/dashboards/uncle/0x5cd50096dbb856a6d1befa6de8f9c20decb299f375154427d90761dc0b101109`:
+`https://api..com/ethereum/dashboards/uncle/0x5cd50096dbb856a6d1befa6de8f9c20decb299f375154427d90761dc0b101109`:
 
 ```json
 {
@@ -2761,7 +2761,7 @@ If there's no `{:hash}ᵢ` has been found in the database, there won't be such k
 **Request cost formula:**
 
 - `1` for `https://api..com/{:eth_chain}/dashboards/uncle/{:hash}₀ ` endpoint
-- `1 + (0.1 * (entity count - 1))`  for `https://api.blockchair.com/{:eth_chain}/dashboards/uncles/{:hash}₀,...,{:hash}ᵩ` endpoint (e.g. it's `1 + (0.1 * (10 - 1)) = 1.9` for requesting 10 uncles)
+- `1 + (0.1 * (entity count - 1))`  for `https://api..com/{:eth_chain}/dashboards/uncles/{:hash}₀,...,{:hash}ᵩ` endpoint (e.g. it's `1 + (0.1 * (10 - 1)) = 1.9` for requesting 10 uncles)
 
 **Explore visualizations on our front-end:**
 
