@@ -2,8 +2,8 @@ Skip to content
 
 nicehash
 /
-NiceHashMiner
 Code
+Hiperhash
 Issues
 246
 Pull requests
@@ -14,7 +14,7 @@ Wiki
 Security
 Insights
  3.0.5.0 
-NiceHashMiner/doc/Plugins/Plugins.md
+hiperhashMiner/doc/Plugins/Plugins.md
 
 luc1an24 Update Plugins.md
 …
